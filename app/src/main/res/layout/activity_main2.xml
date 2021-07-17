@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/txtThemDoVat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="thêm đồ vật"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:hint="Nhập tên đồ vật"
+        android:id="@+id/editNameDoVat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtThemDoVat" />
+
+    <EditText
+        android:hint="mô tả ..."
+        android:id="@+id/editMota"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editNameDoVat"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/editNameDoVat"
+        app:layout_constraintTop_toBottomOf="@+id/editNameDoVat" />
+
+    <ImageView
+        android:id="@+id/imCamera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="@+id/editMota"
+        app:layout_constraintTop_toBottomOf="@+id/editMota"
+        app:srcCompat="@drawable/ic_dslr_camera" />
+
+    <ImageView
+        android:id="@+id/imageIm"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imCamera"
+        app:srcCompat="@drawable/image" />
+
+    <ImageView
+        android:id="@+id/imfolder"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/editMota"
+        app:layout_constraintTop_toTopOf="@+id/imageIm"
+        app:srcCompat="@drawable/ic_empty_folder" />
+
+    <Button
+        android:id="@+id/btnThem2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="ADD"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btnHuy"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageIm" />
+
+    <Button
+        android:id="@+id/btnHuy"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:backgroundTint="#AEAEAE"
+        app:layout_constraintStart_toEndOf="@id/btnThem2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnThem2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
