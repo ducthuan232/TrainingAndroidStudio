@@ -59,6 +59,18 @@ public class MainActivity extends AppCompatActivity {
 
         database.queryData("DELETE FROM DoVat WHERE Id = '"+id+"'");
         Toast.makeText(this, "deleted", Toast.LENGTH_SHORT).show();
+        arrayDoVat.clear();
+        Cursor cursor = database.getData("SELECT * FROM DoVat");
+        while(cursor.moveToNext()){
+            arrayDoVat.add(new DoVat(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getBlob(3)
+            ));
+            adapter.notifyDataSetChanged();
+        }
+
 
 
     }

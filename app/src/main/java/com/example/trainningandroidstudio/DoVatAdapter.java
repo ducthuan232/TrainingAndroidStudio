@@ -54,6 +54,8 @@ public class DoVatAdapter extends BaseAdapter {
             holder.txtTen = (TextView) convertView.findViewById(R.id.txtTen);
             holder.txtMota = (TextView) convertView.findViewById(R.id.txtMoTa);
             holder.imDoVat = (ImageView) convertView.findViewById(R.id.imDoVat);
+            holder.imTrash = (ImageView) convertView.findViewById(R.id.imageTrash);
+
             convertView.setTag(holder);
         }
         else{
@@ -69,7 +71,8 @@ public class DoVatAdapter extends BaseAdapter {
         holder.imTrash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context
+
+                context.xoaCongViec(doVat.getId());
             }
         });
 
